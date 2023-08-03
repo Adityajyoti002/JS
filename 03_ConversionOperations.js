@@ -25,5 +25,12 @@ console.log(booleanIsLoggedIn);
 let somenumber = 33
 let stringsomenumber = String(somenumber)
 
-console.log(stringsomenumber);
-console.log(typeof stringsomenumber);
+//console.log(stringsomenumber);
+//console.log(typeof stringsomenumber);
+
+
+// **********************************************  Operations  ***************************************************************
+
+let value = 3
+let negvalue = -value
+console.log(negvalue)
