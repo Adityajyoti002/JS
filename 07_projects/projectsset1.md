@@ -76,3 +76,75 @@ clock.innerHTML = date.toLocaleTimeString();
 } , 1000)
 
 ```
+
+## Project 4
+
+``` javascript
+
+const randomNumber = console.log(parseInt(Math.random() * 100 + 1));
+
+const submit = document.querySelector('#subt');
+const userInput = document.querySelector('#guessField');
+const guessslot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrhi = document.querySelector('.lowOrHi');
+const startover = document.querySelector('.resultParas');
+
+
+const p = document.createElement('p')
+
+let prevguess = []
+let numguess = 1
+
+let playgame = true
+
+if(playgame){
+  submit.addEventListener('click', function(e){
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+    console.log(guess);
+    validateGuess(guess);
+  });
+}
+
+function validateGuess(guess){
+  if(isNaN(guess)){
+    alert('please enter a valid number')
+  } else if(guess < 1){
+    alert('please enter a number more than one')
+  } else if(guess > 100){
+    alert('please enter a number less than 100')
+  } else {
+    prevguess.push(guess)
+    if(numguess === 11){
+      displayGuess(guess)
+      displayMessage(`Game Over. Random number was ${randomNumber}`)
+      endgame()
+    } else {
+      displayGuess(guess)
+      checkGuess(guess)
+    }
+  }
+}
+
+function checkGuess(guess){
+  //
+}
+
+function displayGuess(guess){
+  //
+}
+
+function displayMessage(message){
+  //
+}
+
+function newGame(){
+  //
+}
+
+function endgame(){
+  //
+}
+
+```
